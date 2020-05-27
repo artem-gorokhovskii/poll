@@ -32,12 +32,15 @@ html, body {
 #container .answer,
 #container .action {
     cursor: pointer;
+    box-sizing: border-box;
     border: 1px dashed #ccc;
     border-radius: 3px;
     text-align: center;
     padding-top: 8px;
     padding-bottom: 8px;
     margin-top: 8px;
+    margin-right: 8px;
+    margin-left: 8px;
 }
 
 #container .answer:hover {
