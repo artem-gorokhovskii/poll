@@ -757,6 +757,7 @@ const DATA = {
         },
         {
             answer: 'Формирование жидкого уплотнения',
+            question: 'Между какими поверхностями необходим уплотнитель?',
             variants: [
                 DATA_GASKETING_METAL_METAL,
                 DATA_GASKETING_METAL_PLASTIC
