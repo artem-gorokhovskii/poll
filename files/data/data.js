@@ -282,6 +282,134 @@ const DATA_FIXATION_METAL_PLASTIC = {
     ]
 };
 
+const DATA_THREAD_SEALING_METAL_METAL = {
+    answer: 'металл - металл',
+    content: 'PERMABOND A1044, PERMABOND A129, PERMABOND A131, PERMABOND MH052, PERMABOND A1058',
+    question: 'Какая необходима прочность?',
+    variants: [
+        {
+            answer: 'низкая',
+            content: 'PERMABOND A131, PERMABOND A1058',
+            question: 'Какой максимальный диаметр резьбового соединения?',
+            variants: [
+                {
+                    answer: 'до M80',
+                    content: 'PERMABOND A131, PERMABOND A1058',
+                    question: 'Есть ли необходимость в допусках?',
+                    variants: [
+                        {
+                            answer: 'WRAS',
+                            content: 'PERMABOND A131, PERMABOND A1058'
+                        },
+                        {
+                            answer: 'KIWA',
+                            content: 'PERMABOND A131'
+                        },
+                        {
+                            answer: 'без допуска',
+                            content: 'PERMABOND A131, PERMABOND A1058'
+                        }
+                    ]
+                },
+                {
+                    answer: 'более M80',
+                    content: 'Активатор PERMABOND A905 + PERMABOND A131, PERMABOND A1058',
+                    question: 'Есть ли необходимость в допусках?',
+                    variants: [
+                        {
+                            answer: 'WRAS',
+                            content: 'Активатор PERMABOND A905 + PERMABOND A131, PERMABOND A1058'
+                        },
+                        {
+                            answer: 'KIWA',
+                            content: 'Активатор PERMABOND A905 + PERMABOND A131'
+                        },
+                        {
+                            answer: 'без допуска',
+                            content: 'Активатор PERMABOND A905 + PERMABOND A131, PERMABOND A1058'
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            answer: 'средняя',
+            content: 'PERMABOND MH052, PERMABOND A129',
+            question: 'Какой максимальный диаметр резьбового соединения?',
+            variants: [
+                {
+                    answer: 'до M80',
+                    content: 'PERMABOND MH052, PERMABOND A129',
+                    question: 'Есть ли необходимость в допусках?',
+                    variants: [
+                        {
+                            answer: 'кислород',
+                            content: 'PERMABOND MH052'
+                        },
+                        {
+                            answer: 'без допуска',
+                            content: 'PERMABOND MH052, PERMABOND A129'
+                        }
+                    ]
+                },
+                {
+                    answer: 'более M80',
+                    content: 'Активатор PERMABOND A905 + PERMABOND MH052, PERMABOND A129',
+                    question: 'Есть ли необходимость в допусках?',
+                    variants: [
+                        {
+                            answer: 'кислород',
+                            content: 'Активатор PERMABOND A905 + PERMABOND MH052'
+                        },
+                        {
+                            answer: 'без допуска',
+                            content: 'Активатор PERMABOND A905 + PERMABOND MH052, PERMABOND A129'
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            answer: 'высокая',
+            content: 'PERMABOND A1044',
+            question: 'Какой максимальный диаметр резьбового соединения?',
+            variants: [
+                {
+                    answer: 'до M80',
+                    content: 'PERMABOND A1044',
+                    question: 'Есть ли необходимость в допусках?',
+                    variants: [                        
+                        {
+                            answer: 'WRAS',
+                            content: 'PERMABOND A1044'
+                        },
+                        {
+                            answer: 'без допуска',
+                            content: 'PERMABOND A1044'
+                        }
+                    ]
+                },
+                {
+                    answer: 'более M80',
+                    content: 'Активатор PERMABOND A905 + PERMABOND A1044',
+                    question: 'Есть ли необходимость в допусках?',
+                    variants: [
+                        {
+                            answer: 'WRAS',
+                            content: 'Активатор PERMABOND A905 + PERMABOND A1044'
+                        },
+                        {
+                            answer: 'без допуска',
+                            content: 'Активатор PERMABOND A905 + PERMABOND A1044'
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+};
+
+
 const DATA = {
     question: 'Какую операцию необходимо выполнить?',
     variants: [
@@ -294,7 +422,11 @@ const DATA = {
             ]
         },
         {
-            answer: 'Резьбовая герметизация'
+            answer: 'Резьбовая герметизация',
+            question: 'Какой тип материалов необходимо загерметизировать?',
+            variants: [
+                DATA_THREAD_SEALING_METAL_METAL
+            ]
         },
         {
             answer: 'Фиксация "вал-втулка"'
