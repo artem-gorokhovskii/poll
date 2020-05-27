@@ -536,6 +536,202 @@ const DATA_THREAD_SEALING_METAL_PLASTIC = {
     ]
 };
 
+const DATA_GASKETING_METAL_METAL = {
+    answer: 'металл - металл',
+    content: 'PERMABOND A136, PERMABOND MH196, PERMABOND MH199, PERMABOND LH197',
+    question: 'Какая необходима прочность?',
+    variants: [
+        {
+            answer: 'низкая',
+            content: 'PERMABOND LH197',
+            question: 'Какой максимальный зазор между склеиваемыми поверхностями?',
+            variants: [
+                {
+                    answer: 'до 0.3мм',
+                    content: 'PERMABOND LH197',
+                    question: 'Какова максимальная температура эксплуатации?',
+                    variants: [
+                        {
+                            answer: 'до 150 &deg;C',
+                            content: 'PERMABOND LH197',
+                            question: 'Есть ли необходимость в допуске WRAS?',
+                            variants: [
+                                {
+                                    answer: 'нет',
+                                    content: 'PERMABOND LH197'
+                                }
+                            ]
+                        }
+                    ]
+                }                
+            ]
+        },
+        {
+            answer: 'средняя',
+            content: 'PERMABOND A136, PERMABOND MH199',
+            question: 'Какой максимальный зазор между склеиваемыми поверхностями?',
+            variants: [
+                {
+                    answer: 'до 0.5мм',
+                    content: 'PERMABOND A136, PERMABOND MH199',
+                    question: 'Какова максимальная температура эксплуатации?',
+                    variants: [
+                        {
+                            answer: 'до 150 &deg;C',
+                            content: 'PERMABOND A136, PERMABOND MH199',
+                            question: 'Есть ли необходимость в допуске WRAS?',
+                            variants: [
+                                {
+                                    answer: 'да',
+                                    content: 'PERMABOND A136'
+                                },
+                                {
+                                    answer: 'нет',
+                                    content: 'PERMABOND A136, PERMABOND MH199'
+                                }
+                            ]
+                        },
+                        {
+                            answer: 'до 200 &deg;C',
+                            content: 'PERMABOND MH199',
+                            question: 'Есть ли необходимость в допуске WRAS?',
+                            variants: [
+                                {
+                                    answer: 'нет',
+                                    content: 'PERMABOND MH199'
+                                }
+                            ]
+                        }
+                    ]
+                }                
+            ]
+        },
+        {
+            answer: 'высокая',
+            content: 'PERMABOND MH196',
+            question: 'Какой максимальный зазор между склеиваемыми поверхностями?',
+            variants: [
+                {
+                    answer: 'выше 0.5мм',
+                    content: 'PERMABOND MH196, Активатор PERMABOND A905 + PERMABOND A136, PERMABOND MH199, PERMABOND LH197',
+                    question: 'Какова максимальная температура эксплуатации?',
+                    variants: [
+                        {
+                            answer: 'до 200 &deg;C',
+                            content: 'PERMABOND MH196',
+                            question: 'Есть ли необходимость в допуске WRAS?',
+                            variants: [
+                                {
+                                    answer: 'нет',
+                                    content: 'PERMABOND MH196'
+                                }
+                            ]
+                        }
+                    ]
+                }                
+            ]
+        }
+    ]
+};
+
+const DATA_GASKETING_METAL_PLASTIC = {
+    answer: 'металл - пластик',
+    content: 'PERMABOND A136, PERMABOND MH196, PERMABOND MH199, PERMABOND LH197',
+    question: 'Какая необходима прочность?',
+    variants: [
+        {
+            answer: 'низкая',
+            content: 'Активатор PERMABOND A905 + PERMABOND LH197',
+            question: 'Какой максимальный зазор между склеиваемыми поверхностями?',
+            variants: [
+                {
+                    answer: 'до 0.3мм',
+                    content: 'Активатор PERMABOND A905 + PERMABOND LH197',
+                    question: 'Какова максимальная температура эксплуатации?',
+                    variants: [
+                        {
+                            answer: 'до 150 &deg;C',
+                            content: 'Активатор PERMABOND A905 + PERMABOND LH197',
+                            question: 'Есть ли необходимость в допуске WRAS?',
+                            variants: [
+                                {
+                                    answer: 'нет',
+                                    content: 'Активатор PERMABOND A905 + PERMABOND LH197'
+                                }
+                            ]
+                        }
+                    ]
+                }                
+            ]
+        },
+        {
+            answer: 'средняя',
+            content: 'Активатор PERMABOND A905 + PERMABOND A136, PERMABOND MH199',
+            question: 'Какой максимальный зазор между склеиваемыми поверхностями?',
+            variants: [
+                {
+                    answer: 'до 0.5мм',
+                    content: 'Активатор PERMABOND A905 + PERMABOND A136, PERMABOND MH199',
+                    question: 'Какова максимальная температура эксплуатации?',
+                    variants: [
+                        {
+                            answer: 'до 150 &deg;C',
+                            content: 'Активатор PERMABOND A905 + PERMABOND A136, PERMABOND MH199',
+                            question: 'Есть ли необходимость в допуске WRAS?',
+                            variants: [
+                                {
+                                    answer: 'да',
+                                    content: 'Активатор PERMABOND A905 + PERMABOND A136'
+                                },
+                                {
+                                    answer: 'нет',
+                                    content: 'Активатор PERMABOND A905 + PERMABOND A136, PERMABOND MH199'
+                                }
+                            ]
+                        },
+                        {
+                            answer: 'до 200 &deg;C',
+                            content: 'Активатор PERMABOND A905 + PERMABOND MH199',
+                            question: 'Есть ли необходимость в допуске WRAS?',
+                            variants: [
+                                {
+                                    answer: 'нет',
+                                    content: 'Активатор PERMABOND A905 + PERMABOND MH199'
+                                }
+                            ]
+                        }
+                    ]
+                }                
+            ]
+        },
+        {
+            answer: 'высокая',
+            content: 'Активатор PERMABOND A905 + PERMABOND MH196',
+            question: 'Какой максимальный зазор между склеиваемыми поверхностями?',
+            variants: [
+                {
+                    answer: 'выше 0.5мм',
+                    content: 'Активатор PERMABOND A905 + PERMABOND MH196, PERMABOND A136, PERMABOND MH199, PERMABOND LH197',
+                    question: 'Какова максимальная температура эксплуатации?',
+                    variants: [
+                        {
+                            answer: 'до 200 &deg;C',
+                            content: 'Активатор PERMABOND A905 + PERMABOND MH196',
+                            question: 'Есть ли необходимость в допуске WRAS?',
+                            variants: [
+                                {
+                                    answer: 'нет',
+                                    content: 'Активатор PERMABOND A905 + PERMABOND MH196'
+                                }
+                            ]
+                        }
+                    ]
+                }                
+            ]
+        }
+    ]
+};
+
 const DATA = {
     question: 'Какую операцию необходимо выполнить?',
     variants: [
@@ -556,54 +752,15 @@ const DATA = {
             ]
         },
         {
-            answer: 'Фиксация "вал-втулка"'
+            answer: 'Фиксация "вал-втулка"',
+            content: 'В разработке'
         },
         {
-            answer: 'Формирование жидкой прокладки'
+            answer: 'Формирование жидкого уплотнения',
+            variants: [
+                DATA_GASKETING_METAL_METAL,
+                DATA_GASKETING_METAL_PLASTIC
+            ]
         }
     ]
 };
-
-// {
-//     answer: 'Вариант А',
-//     question: 'Что после варианта А делаем?',
-//     variants: [
-//         {
-//             answer: 'Ничего, выводим контент',
-//             content: 'JSON контент'
-//         },
-//         {
-//             answer: 'Ещё 1 углубление',
-//             question: 'Да или нет?',
-//             variants: [
-//                 {
-//                     answer: 'Да',
-//                     content: 'Отлично'
-//                 },
-//                 {
-//                     answer: 'Нет',
-//                     content: 'Не очень хорошо'
-//                 }
-//             ]
-//         }
-//     ]
-// },
-// {
-//     answer: 'Вариант Б (короткий)',
-//     content: 'Закончилось'
-// },
-// {
-//     answer: 'Вариант С (выбор и контент)',
-//     content: '<img src="./files/images/dog.jpg" /><div>Пёс красивый</div>',
-//     question: 'Понравилось?',
-//     variants: [
-//         {
-//             answer: 'Да',
-//             content: 'Отлично'
-//         },
-//         {
-//             answer: 'Нет',
-//             content: 'Жаль'
-//         }
-//     ]
-// }
