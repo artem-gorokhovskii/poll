@@ -28,4 +28,12 @@ class UserInterface {
         answer.onclick = onclick;
         this.container.appendChild(answer);
     }
+
+    createActionButton (value, onclick) {
+        const answer = document.createElement('div');
+        answer.classList.add('action');
+        answer.innerHTML = value;
+        answer.onclick = onclick;
+        this.container.appendChild(answer);
+    }
 }

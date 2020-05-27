@@ -29,7 +29,8 @@ html, body {
     margin-top: 16px;
 }
 
-#container .answer {
+#container .answer,
+#container .action {
     cursor: pointer;
     border: 1px dashed #ccc;
     border-radius: 3px;
@@ -40,5 +41,13 @@ html, body {
 }
 
 #container .answer:hover {
-    background: #aaa;
+    background: #bbb;
+}
+
+#container .action {
+    background: #fcc;
+}
+
+#container .action:hover {
+    background: #faa;
 }

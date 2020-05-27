@@ -21,8 +21,14 @@ class App {
             state.variants.forEach(variant => {
                 this.interface.createAnswer(variant.answer, () => this.handleAnswerClick(variant));
             });
-        } else {
-            this.interface.createAnswer('Вернуться в начало', () => this.handleResetButton());
+        }
+
+        if (this.state.isHistoryExists()) {
+            this.interface.createActionButton('Вернуться назад', () => this.handleBackButtonClick());
+        }
+        
+        if (!state.variants) {
+            this.interface.createActionButton('Вернуться в начало', () => this.handleResetButtonClick());
         }
     }
 
@@ -31,8 +37,13 @@ class App {
         this.drawInterface();
     }
 
-    handleResetButton () {
+    handleResetButtonClick () {
         this.state.restoreState();
+        this.drawInterface();
+    }
+
+    handleBackButtonClick () {
+        this.state.returnPreviousState();
         this.drawInterface();
     }
 }
