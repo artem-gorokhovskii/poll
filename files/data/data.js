@@ -732,6 +732,27 @@ const DATA_GASKETING_METAL_PLASTIC = {
     ]
 };
 
+const DATA_FIXATOR_SHAFT_SLEEVE_METALL_METALL = {
+    answer: 'металл - металл',
+    content: 'A025...',
+    question: 'Какая необходима прочность?',
+    variants: [
+        {
+            answer: 'низкая'
+        },
+        {
+            answer: 'средняя'
+        },
+        {
+            answer: 'высокая'
+        }        
+    ]
+};
+
+const DATA_FIXATOR_SHAFT_SLEEVE_METALL_PLASTIC = {
+
+};
+
 const DATA = {
     question: 'Какую операцию необходимо выполнить?',
     variants: [
@@ -753,7 +774,11 @@ const DATA = {
         },
         {
             answer: 'Фиксация "вал-втулка"',
-            content: 'В разработке'
+            question: 'Какие материалы необходимо зафиксировать?',
+            variants: [
+                DATA_FIXATOR_SHAFT_SLEEVE_METALL_METALL,
+                DATA_FIXATOR_SHAFT_SLEEVE_METALL_PLASTIC
+            ]
         },
         {
             answer: 'Формирование жидкого уплотнения',
